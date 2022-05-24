@@ -3,7 +3,7 @@ or follow us on social media
 [Twitter](http://twitter.com/virtomize) 
 [LinkedIn](http://www.linkedin.com/company/virtomize)
 
-# unattended_install_client
+# UUI Golang API
 This repository contains an implementation of a client for the **Virtomize Unattended Install Images API**.
 
 ## Add to project
@@ -49,13 +49,13 @@ This requires the API token created in the UI (see below).
 Before using this client library, you need to register an API token under your account.
 For this, login into the [website](virtomize.com) and go to the "API-Token" tab.
 
-![API-Token tab](https://github.com/Virtomize/uii_go_api/blob/correct_blob/doc/api-token.png "API-Token tab")
+![API-Token tab](https://github.com/Virtomize/uii_go_api/blob/60f79a50fc429f630eba553aaf057e6daa12ef97/doc/api-token.png "API-Token tab")
 
 There, create a new API token by clicking "Create" and give it a name. Then click save.
-![Create a token](https://github.com/Virtomize/uii_go_api/blob/correct_blob/doc/api-token-create.png "Create a token")
+![Create a token](https://github.com/Virtomize/uii_go_api/blob/60f79a50fc429f630eba553aaf057e6daa12ef97/doc/api-token-create.png "Create a token")
 
 A new token will be created.
 Copy this token, as it will be hidden, once you log out.
 There, create a new API token by clicking "Create" and give it a name. Then click save.
-![Save token](https://github.com/Virtomize/uii_go_api/blob/correct_blob/doc/api-token-created.png "Save token")
+![Save token](https://github.com/Virtomize/uii_go_api/blob/60f79a50fc429f630eba553aaf057e6daa12ef97/doc/api-token-created.png "Save token")
 

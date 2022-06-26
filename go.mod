@@ -1,4 +1,4 @@
-module github.com/Virtomize/uii_go_api
+module github.com/Virtomize/uii-go-api
 
 go 1.16
 

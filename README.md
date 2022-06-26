@@ -11,7 +11,7 @@ This repository contains an implementation of a client for the [**Virtomize Unat
 To use this client, first add it to your Go project by running `go get` from your command line
 
 ``` bash 
-go get github.com/virtomize/uii_go_api
+go get github.com/virtomize/uii-go-api
 ```
 
 ## Build an ISO

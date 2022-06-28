@@ -19,9 +19,9 @@ Building an ISO requires two steps.
 1. Create a client object by using the `NewClient` function. 
 This requires the API token created in the UI (see below). 
 
-```go
+    ```go
     c := client.NewClient("myTokenHere")
-```
+    ```
 
 2. Building the ISO by using `Build` on the client object. 
     ```go

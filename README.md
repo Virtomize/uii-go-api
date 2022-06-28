@@ -39,7 +39,7 @@ This requires the API token created in the UI (see below).
    ```
    
    `Build` requires 3 parameters: 
-   - a path to the output file
+   - A path to the output file
    - A set of required parameters represented by the `BuildArgs` struct. 
     This struct should be fully initialized with valid values.
    - A set of optional parameters represented by the `BuildOpts` struct.

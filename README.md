@@ -2,7 +2,6 @@
 [![GoDoc](https://img.shields.io/badge/godoc-reference-green.svg)](https://godoc.org/github.com/virtomize/uii-go-api)
 [![Go Report Card](https://goreportcard.com/badge/github.com/virtomize/uii-go-api)](https://goreportcard.com/report/github.com/virtomize/uii-go-api)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/virtomize/uii-go-api/blob/master/LICENSE)
-[![Built with Mage](https://magefile.org/badge.svg)](https://magefile.org)
 [![Website](https://img.shields.io/badge/%40-Virtomize-%231e828c)](https://virtomize.com)
 [![Twitter](https://badgen.net/badge/icon/twitter?icon=twitter&label)](https://twitter.com/virtomize)
 [![LinkedIn](https://img.shields.io/badge/linkedIn-%20-blue.svg?style=social&logo=linkedin)](https://www.linkedin.com/company/virtomize/)

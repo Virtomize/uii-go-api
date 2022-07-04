@@ -1,3 +1,4 @@
+GO ?= go
 GOLINT ?= golint
 GOSEC ?= gosec
 VERSION ?=$(shell git describe --tags --always)

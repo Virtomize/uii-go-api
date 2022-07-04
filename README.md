@@ -67,7 +67,17 @@ There, create a new API token by clicking "Create" and give it a name. Then clic
 
 # Contribution
 
-This repo uses [pre-commit hooks](https://pre-commit.com/). Please install pre-commit and do `pre-commit install`
-
 Thank you for participating to this project.
 Please see our [Contribution Guidlines](https://github.com/virtomize/uii-go-api/blob/master/CONTRIBUTING.md) for more information.
+
+## Pre-Commit
+
+This repo uses [pre-commit hooks](https://pre-commit.com/). Please install pre-commit and do `pre-commit install`
+
+## Conventional Commits
+
+Format commit messaged according to [Conventional Commits standard](https://www.conventionalcommits.org/en/v1.0.0/).
+
+## Semantic Versioning
+
+Whenever you need to version something make use of [Semantic Versioning](https://semver.org).

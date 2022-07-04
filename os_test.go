@@ -1,7 +1,7 @@
 package uiiclient
 
 import (
-	"fmt"
+	"encoding/json"
 	"net/http"
 	"net/http/httptest"
 	"net/url"
@@ -11,23 +11,15 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestBuild(t *testing.T) {
+func TestOperatingSystems(t *testing.T) {
 	assert := assert.New(t)
-
-	args := BuildArgs{
-		Distribution: "UnitTest",
-		Version:      "1",
-		Hostname:     "Horst",
-		Networks:     []NetworkArgs{{DHCP: true}},
-	}
-	opts := BuildOpts{}
 
 	t.Run("success", func(t *testing.T) {
 		c, err := NewClient("my-token")
 		assert.NoError(err)
 
 		server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-			b, err := os.ReadFile("testdata/test.iso")
+			b, err := os.ReadFile("testdata/os.json")
 			assert.NoError(err)
 			_, _ = w.Write(b)
 		}))
@@ -35,23 +27,26 @@ func TestBuild(t *testing.T) {
 		c.url, err = url.Parse(server.URL)
 		assert.NoError(err)
 
-		err = c.Build("testdata/build-test.iso", args, opts)
+		actual, err := c.OperatingSystems()
 		assert.NoError(err)
 
-		b, err := os.ReadFile("testdata/build-test.iso")
+		expected := []OS{}
+		b, err := os.ReadFile("testdata/TestOperatingSystems_success.golden")
 		assert.NoError(err)
-		assert.Equal("test\n", string(b))
+
+		err = json.Unmarshal(b, &expected)
+		assert.NoError(err)
+
+		assert.Equal(expected, actual)
 	})
 
 	t.Run("failure-api-error", func(t *testing.T) {
 		c, err := NewClient("my-token")
 		assert.NoError(err)
-		b, err := os.ReadFile("testdata/error.json")
-		assert.NoError(err)
-
-		expected := parseError(b)
 
 		server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			b, err := os.ReadFile("testdata/error.json")
+			assert.NoError(err)
 			w.WriteHeader(http.StatusBadRequest)
 			_, _ = w.Write(b)
 		}))
@@ -59,9 +54,8 @@ func TestBuild(t *testing.T) {
 		c.url, err = url.Parse(server.URL)
 		assert.NoError(err)
 
-		err = c.Build("testdata/build-test.iso", args, opts)
+		_, err = c.OperatingSystems()
 		assert.Error(err)
-		assert.Equal(fmt.Errorf("unexpected status code 400: %w", expected), err)
 	})
 
 	t.Run("failure-unknown-error", func(t *testing.T) {
@@ -69,14 +63,14 @@ func TestBuild(t *testing.T) {
 		assert.NoError(err)
 
 		server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-			w.WriteHeader(http.StatusBadRequest)
+			w.WriteHeader(http.StatusInternalServerError)
 			_, _ = w.Write([]byte("some error"))
 		}))
 
 		c.url, err = url.Parse(server.URL)
 		assert.NoError(err)
 
-		err = c.Build("testdata/build-test.iso", args, opts)
+		_, err = c.OperatingSystems()
 		assert.Error(err)
 	})
 }

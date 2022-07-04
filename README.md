@@ -1,10 +1,14 @@
-Learn more about [Virtomize](virtomize.com) 
-or follow us on social media 
-[Twitter](http://twitter.com/virtomize) 
-[LinkedIn](http://www.linkedin.com/company/virtomize)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VBXHBYFU44T5W&source=url)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-green.svg)](https://godoc.org/github.com/virtomize/uii-go-api)
+[![Go Report Card](https://goreportcard.com/badge/github.com/virtomize/uii-go-api)](https://goreportcard.com/report/github.com/virtomize/uii-go-api)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/virtomize/uii-go-api/blob/master/LICENSE)
+[![Built with Mage](https://magefile.org/badge.svg)](https://magefile.org)
+[![Website](https://img.shields.io/badge/%40-Virtomize-%231e828c)](https://virtomize.com)
+[![Twitter](https://badgen.net/badge/icon/twitter?icon=twitter&label)](https://twitter.com/virtomize)
+[![LinkedIn](https://img.shields.io/badge/linkedIn-%20-blue.svg?style=social&logo=linkedin)](https://www.linkedin.com/company/virtomize/)
 
 # UUI Golang API
-This repository contains an implementation of a client for the [**Virtomize Unattended Install Images API**](https://uii.virtomize.com/).
+This repository contains the go implementation of [**Virtomize Unattended Install Images API**](https://uii.virtomize.com/).
 
 ## Add to project
 
@@ -25,17 +29,19 @@ This requires the API token created in the UI (see below).
 
 2. Building the ISO by using `Build` on the client object. 
     ```go
-   err := c.Build(l.Output, 
-        client.BuildArgs{
-            Distribution: "debian",
-            Version:      "10",
-            Hostname:     "host",
-            Networks: []client.NetworkArgs{            
-                DHCP:       true,
-                NoInternet: false,
-            },
-       },         
-       client.BuildOpts{})
+     c := uiiclient.NewClient("myTokenHere")
+     err := c.Build("/tmp/my-iso.iso", uiiclient.BuildArgs{
+       Distribution: "debian",
+       Version:      "11",
+       Hostname:     "my-debian",
+       Networks: []uiiclient.NetworkArgs{
+         DHCP:       true,
+         NoInternet: false,
+       },
+     }, uiiclient.BuildOpts{})
+     if err != nil {
+       // handle error
+     }
    ```
    
    `Build` requires 3 parameters: 
@@ -49,13 +55,19 @@ This requires the API token created in the UI (see below).
 Before using this client library, you need to register an API token under your account.
 For this, login into the [website](virtomize.com) and go to the "API-Token" tab.
 
-![API-Token tab](https://github.com/Virtomize/uii_go_api/blob/60f79a50fc429f630eba553aaf057e6daa12ef97/doc/api-token.png "API-Token tab")
+![API-Token tab](https://github.com/Virtomize/uii-go-api/blob/master/doc/api-token.png "API-Token tab")
 
 There, create a new API token by clicking "Create" and give it a name. Then click save.
-![Create a token](https://github.com/Virtomize/uii_go_api/blob/60f79a50fc429f630eba553aaf057e6daa12ef97/doc/api-token-create.png "Create a token")
+![Create a token](https://github.com/Virtomize/uii-go-api/blob/master/doc/api-token-create.png "Create a token")
 
 A new token will be created.
 Copy this token, as it will be hidden, once you log out.
 There, create a new API token by clicking "Create" and give it a name. Then click save.
-![Save token](https://github.com/Virtomize/uii_go_api/blob/60f79a50fc429f630eba553aaf057e6daa12ef97/doc/api-token-created.png "Save token")
+![Save token](https://github.com/Virtomize/uii-go-api/blob/master/doc/api-token-created.png "Save token")
 
+# Contribution
+
+This repo uses [pre-commit hooks](https://pre-commit.com/). Please install pre-commit and do `pre-commit install`
+
+Thank you for participating to this project.
+Please see our [Contribution Guidlines](https://github.com/virtomize/uii-go-api/blob/master/CONTRIBUTING.md) for more information.

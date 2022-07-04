@@ -1,0 +1,12 @@
+{
+  "_embedded": {
+    "dist": "test",
+    "version": "A",
+    "arch": "x86_64",
+    "packages": [
+      "a",
+      "b",
+      "c"
+    ]
+  }
+}

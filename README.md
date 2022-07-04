@@ -8,7 +8,7 @@
 [![LinkedIn](https://img.shields.io/badge/linkedIn-%20-blue.svg?style=social&logo=linkedin)](https://www.linkedin.com/company/virtomize/)
 
 # UUI Golang API
-This repository contains the go implementation of [**Virtomize Unattended Install Images API**](https://uii.virtomize.com/).
+This repository contains the go client implementation of [**Virtomize Unattended Install Images API**](https://uii.virtomize.com/).
 
 ## Add to project
 

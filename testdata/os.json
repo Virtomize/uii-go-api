@@ -1,0 +1,10 @@
+{
+  "_embedded": [
+    {
+      "dist": "test-dist",
+      "version": "test-version",
+      "arch": "test-arch",
+      "displayname": "test dist"
+    }
+  ]
+}

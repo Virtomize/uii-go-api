@@ -1,0 +1,8 @@
+[
+  {
+    "arch": "test-arch",
+    "displayname": "test dist",
+    "dist": "test-dist",
+    "version": "test-version"
+  }
+]

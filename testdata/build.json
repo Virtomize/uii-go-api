@@ -1,0 +1,18 @@
+{
+  "arch": "",
+  "dist": "UnitTest",
+  "hostname": "Horst",
+  "keyboard": "",
+  "locale": "",
+  "networks": [
+    {
+      "dhcp": true
+    }
+  ],
+  "packages": null,
+  "password": "",
+  "sshkeys": null,
+  "sshpasswordauth": false,
+  "timezone": "",
+  "version": "1"
+}

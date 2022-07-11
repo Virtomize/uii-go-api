@@ -1,0 +1,8 @@
+{
+  "errors": [
+    "none of your networks has a valid internet connection"
+  ],
+  "timestamp": "2022-01-16T18:12:52+0000",
+  "statuscode": 400,
+  "instance": "/images"
+}

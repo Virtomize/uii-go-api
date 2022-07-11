@@ -1,5 +1,5 @@
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VBXHBYFU44T5W&source=url)
-[![GoDoc](https://img.shields.io/badge/godoc-reference-green.svg)](https://godoc.org/github.com/virtomize/uii-go-api)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-green.svg)](https://godoc.org/github.com/Virtomize/uii-go-api)
 [![Go Report Card](https://goreportcard.com/badge/github.com/virtomize/uii-go-api)](https://goreportcard.com/report/github.com/virtomize/uii-go-api)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/virtomize/uii-go-api/blob/master/LICENSE)
 [![Website](https://img.shields.io/badge/%40-Virtomize-%231e828c)](https://virtomize.com)
@@ -23,7 +23,7 @@ Building an ISO requires two steps.
 This requires the API token created in the UI (see below). 
 
     ```go
-    c,err := client.NewClient("myTokenHere")
+    c, err := client.NewClient("myTokenHere")
     ```
 
 2. Building the ISO by using `Build` on the client object. 

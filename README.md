@@ -23,13 +23,17 @@ Building an ISO requires two steps.
 This requires the API token created in the UI (see below). 
 
     ```go
-    c := client.NewClient("myTokenHere")
+    c,err := client.NewClient("myTokenHere")
     ```
 
 2. Building the ISO by using `Build` on the client object. 
     ```go
-     c := uiiclient.NewClient("myTokenHere")
-     err := c.Build("/tmp/my-iso.iso", uiiclient.BuildArgs{
+     c, err := uiiclient.NewClient("myTokenHere")
+     if (err != nil){
+         // handle error
+     }
+   
+     err = c.Build("/tmp/my-iso.iso", uiiclient.BuildArgs{
        Distribution: "debian",
        Version:      "11",
        Hostname:     "my-debian",

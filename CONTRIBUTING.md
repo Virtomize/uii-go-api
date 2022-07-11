@@ -1,11 +1,11 @@
 # Contributing to uii-go-api
 
-- [Code of Conduct](#code-fo-conduct)
+- [Code of Conduct](#code-of-conduct)
 - [Issues](#issues)
 - [Pull Requests](#pull-requests)
 - [Reviewing](#reviewing)
 
-## [Code of Conduct](https://github.com/virtomize/uii-go-api/blob/master/CODE_OF_CONDUCT.md)
+## Code of Conduct
 
 The uii-go-api project follows the [Contributor Covenant Code of Conduct](https://github.com/virtomize/uii-go-api/blob/master/CODE_OF_CONDUCT.md)
 

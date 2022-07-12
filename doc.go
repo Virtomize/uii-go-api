@@ -4,7 +4,7 @@ Package uiiclient implementing Virtomize UII REST API
 Simple example:
 
 	c,err := uiiclient.NewClient("myTokenHere")
-    if err != nil {
+	if err != nil {
 		// handle error
 	}
 

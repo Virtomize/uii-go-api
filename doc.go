@@ -3,8 +3,12 @@ Package uiiclient implementing Virtomize UII REST API
 
 Simple example:
 
-	c := uiiclient.NewClient("myTokenHere")
-	err := c.Build("/tmp/my-iso.iso", uiiclient.BuildArgs{
+	c,err := uiiclient.NewClient("myTokenHere")
+    if err != nil {
+		// handle error
+	}
+
+	err = c.Build("/tmp/my-iso.iso", uiiclient.BuildArgs{
 		Distribution: "debian",
 		Version:      "11",
 		Hostname:     "my-debian",

@@ -56,7 +56,7 @@ This requires the API token created in the UI (see below).
 
 ## Register an API token
 Before using this client library, you need to register an API token under your account.
-For this, login into the [website](virtomize.com) and go to the "API-Token" tab.
+For this, login into the [website](https://uii.virtomize.com/) and go to the "API-Token" tab.
 
 ![API-Token tab](https://github.com/Virtomize/uii-go-api/blob/master/doc/api-token.png "API-Token tab")
 

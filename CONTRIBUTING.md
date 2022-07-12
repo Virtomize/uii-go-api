@@ -31,7 +31,7 @@ This project uses [Mage](https://magefile.org/) which is a replacement for the c
 
 ### 1. Fork 
 
-Fork the project [on Github](https://github.com/virtomize/uii-go-api/) and clone your fork
+Fork the project [on GitHub](https://github.com/virtomize/uii-go-api/) and clone your fork
 
 ```
 $ git clone git@github.com:username/uii-go-api.git
@@ -141,14 +141,14 @@ While reviewing you will probably get some feedback or requests for changes to y
 
 To make changes to an existing Pull Request, make the changes to your local branch.
 Add a new commit including those changes and push them to your fork.
-The Pull Requests will automatically updated by GitHub.
+The Pull Requests will be automatically updated by GitHub.
 
 ```
 $ git add files/changed
 $ git commit
 $ git push origin example-branch
 ```
-**Approvement and Changes**
+**Approval and Changes**
 
 Whenever a contributor reviews a Pull Request they may find specific details that they would like to see changed or fixed. 
 These may be as simple as fixing a typo, or may involve substantive changes to the code you have written. 

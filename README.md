@@ -38,8 +38,10 @@ This requires the API token created in the UI (see below).
        Version:      "11",
        Hostname:     "my-debian",
        Networks: []uiiclient.NetworkArgs{
-         DHCP:       true,
-         NoInternet: false,
+         {
+            DHCP:       true,
+            NoInternet: false,
+         }
        },
      }, uiiclient.BuildOpts{})
      if err != nil {
